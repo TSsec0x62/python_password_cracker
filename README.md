@@ -9,8 +9,4 @@ How it works
 4. If they match then it spits out the answer
 5. If not it reads in next password and compares
 
-In the folder that you have this script located, you must include
-the password that you want to crack in a file called 'encrypted_pass'
-and your password list must be in a file called 'password_list'
-
 TSsec0x62
