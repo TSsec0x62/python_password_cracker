@@ -6,10 +6,6 @@ How it works
 2. Reads in a password list
 4. Compares them
 5. Spits out the unencrypted password
-
-In the folder that you have this script located, you must include 
-the password that you want to crack in a file called 'encrypted_pass'
-and your password list must be in a file called 'password_list'
 '''
 
 #importing libraries
