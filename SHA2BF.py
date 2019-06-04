@@ -1,12 +1,4 @@
-'''
-SHA256 Bruteforcing Tool
-
-How it works
-1. Reads in encrypted password
-2. Reads in a password list
-4. Compares them
-5. Spits out the unencrypted password
-'''
+#SHA256 Bruteforcing Tool
 
 #importing libraries
 import hashlib
@@ -25,16 +17,14 @@ def compare_to_passlist(encrypted_password, password_list):
 	counter = 0
 	password_list = open(password_list, "r")
 	for line in password_list:
-		line = str(line)
 		line = line.strip()
 		sha_signature = hashlib.sha256(line.encode()).hexdigest()
-		sha_signature = str(sha_signature)
-		sha_signature.strip()
 		counter = counter + 1
 		if sha_signature == encrypted_password:
 			print("Password succesfully cracked after " + str(counter) + " attempts!")
 			print("The password is: " + line)
 
+#Takes in filepaths from command line
 def parse_in_arguments():
 	parser = argparse.ArgumentParser(description = 'Take in the file names', usage="python3 SHA2BF.py [path/to/password_list] [path/to/encrypted_password]")
 	parser.add_argument('pl', action="store", type=str, help='password list file path')
@@ -42,6 +32,7 @@ def parse_in_arguments():
 	args = parser.parse_args()
 	return args
 
+#Main code
 def main():
 	args = parse_in_arguments()
 	encrypted_password = read_encrypted_pass(args.ep)
