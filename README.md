@@ -1,5 +1,6 @@
-# simple_sha256_BF
-A simple python sha256 bruteforcing tool
+# python_password_cracker
+A simple python password cracking tool
+Currently supports SHA2-256 and MD5
 
 How it works
 1. Reads in encrypted password
